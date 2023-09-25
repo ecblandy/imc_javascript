@@ -12,8 +12,8 @@
             <h1>Imc</h1>
             <p>Índice de massa corporal</p>
             <form>
-                <input required type="number" id="altura" placeholder="Digite sua altura">
-                <input required type="number" id="peso" placeholder="Digite seu peso (sem KG)">
+                <input maxlength="4" autocomplete="off" required type="text" id="altura" class="desabilitaPontoVirgula" placeholder="Digite sua altura">
+                <input maxlength="3" autocomplete="off" required type="text" id="peso" class="desabilitaPontoVirgula" placeholder="Digite seu peso (sem KG)">
                 <button type="button" id="buttonCalcular">Calcular IMC</button>
                 <input readonly type="text" id="respostaIMC" placeholder="Resultado do seu IMC">
             </form>

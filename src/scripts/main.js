@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const altura = document.getElementById('altura')
+
+    altura.addEventListener('keypress', () => {
+        const altura = document.getElementById('altura')
+        let alturaLength = altura.value.length
+        if (alturaLength === 1) {
+            altura.value += '.'
+        }
+    })
+
+    const camposDeEntrada = document.querySelectorAll('.desabilitaPontoVirgula')
+
+        camposDeEntrada.forEach(function(campo) {
+          campo.addEventListener('keydown', function(event) {
+            if (event.key === '.' || event.key === ',') {
+              event.preventDefault()
+            }
+          })
+        })
+
+
+
     document.getElementById('buttonCalcular').addEventListener('click', () => {
         let altura = document.getElementById('altura').value
         let peso = document.getElementById('peso').value
