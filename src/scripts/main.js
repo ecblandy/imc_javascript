@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const altura = document.getElementById('altura')
 
-    altura.addEventListener('keypress', () => {
+    altura.addEventListener('input', () => {
         const altura = document.getElementById('altura')
         let alturaLength = altura.value.length
         if (alturaLength === 1) {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const camposDeEntrada = document.querySelectorAll('.desabilitaPontoVirgula')
 
         camposDeEntrada.forEach(function(campo) {
-          campo.addEventListener('keydown', function(event) {
+          campo.addEventListener('input', function(event) {
             if (event.key === '.' || event.key === ',') {
               event.preventDefault()
             }
